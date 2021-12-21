@@ -35,7 +35,11 @@ void main() {
       app.main();
       await tester.pumpAndSettle();
 
+      await tester.pump(const Duration(seconds: 2));
+
       await tryLogout(logoutAction, tester);
+
+      await tester.pump(const Duration(seconds: 2));
 
       expect(emailField, findsOneWidget);
       expect(passwordField, findsOneWidget);
@@ -105,7 +109,11 @@ void main() {
       app.main();
       await tester.pumpAndSettle();
 
+      await tester.pump(const Duration(seconds: 2));
+
       await tryLogout(logoutAction, tester);
+
+      await tester.pump(const Duration(seconds: 2));
 
       expect(emailField, findsOneWidget);
       expect(passwordField, findsOneWidget);

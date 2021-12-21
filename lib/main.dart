@@ -10,5 +10,5 @@ void main() {
       showColors: true,
     ),
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
